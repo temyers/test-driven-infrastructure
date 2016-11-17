@@ -18,7 +18,7 @@ describe "MyApp Container" do
       end
   
       it "should have copied my app files" do
-        expect(file('/usr/local/apache2/htdocs/index.html')).to exist
+        expect(file('/usr/local/apache2/htdocs/index.html').content).to match /Hello World/ 
       end
     
     end
