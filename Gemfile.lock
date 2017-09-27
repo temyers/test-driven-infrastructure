@@ -1,0 +1,78 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ansible_spec (0.2.8)
+      hostlist_expression
+      oj
+      serverspec (>= 2.0.0)
+    builder (3.2.3)
+    ci_reporter (2.0.0)
+      builder (>= 2.1.2)
+    ci_reporter_rspec (1.0.0)
+      ci_reporter (~> 2.0)
+      rspec (>= 2.14, < 4)
+    diff-lcs (1.3)
+    docker-api (1.33.4)
+      excon (>= 0.38.0)
+      json
+    excon (0.56.0)
+    hostlist_expression (0.2.1)
+    json (2.1.0)
+    multi_json (1.12.1)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.1.0)
+    net-telnet (0.1.1)
+    netaddr (1.5.1)
+    oj (3.1.3)
+    rake (12.0.0)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+    rspec-core (3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-expectations (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-support (3.6.0)
+    rspec_junit_formatter (0.3.0)
+      rspec-core (>= 2, < 4, != 2.12.0)
+    serverspec (2.39.1)
+      multi_json
+      rspec (~> 3.0)
+      rspec-its
+      specinfra (~> 2.68)
+    sfl (2.3)
+    specinfra (2.68.0)
+      net-scp
+      net-ssh (>= 2.7, < 5.0)
+      net-telnet
+      sfl
+    trollop (2.1.2)
+    yamllint (0.0.9)
+      trollop (~> 2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ansible_spec (= 0.2.8)
+  bundler (~> 1.13)
+  ci_reporter_rspec
+  docker-api
+  netaddr
+  rake
+  rspec
+  rspec_junit_formatter
+  serverspec
+  yamllint
+
+BUNDLED WITH
+   1.15.1

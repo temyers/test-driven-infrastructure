@@ -14,12 +14,12 @@ describe "I am logged onto the webserver" do
       it { should be_running }
     end
 
-    describe port(8080) do
-      it { should be_listening }
-    end
+    # describe port(8080) do
+    #   it { should be_listening }
+    # end
 
-    describe command("curl http://localhost:8080") do
-      its(:stdout) { should match /Hello World/ }    
+    describe command("curl http://myapp:80") do
+      its(:stdout) { should match /Hello World/ }
     end
 
   end

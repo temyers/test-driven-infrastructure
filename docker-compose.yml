@@ -1,0 +1,16 @@
+version: '2'
+services:
+  dev-env:
+    build:
+      context: dev-env
+      dockerfile: Dockerfile
+    image: myproject-dev-env:latest
+    # image: ruby:2.4.1
+    entrypoint: bash
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ~/.ssh/:/root/.ssh
+      # Enable the use of Docker from within the container
+      - /var/run/docker.sock:/var/run/docker.sock
+  myapp:

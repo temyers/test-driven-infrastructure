@@ -70,3 +70,25 @@ Rerun your tests: `rspec spec/webserver_spec.rb`
 THE TESTS SHOULD PASS.
 
 Clean up: `ruby devops/cleanup_webserver.rb``
+
+
+# Running in Docker
+If you're running inside a Docker container, and using sibling containers for running my app:
+
+```
+# docker ps
+CONTAINER ID        IMAGE                      COMMAND              CREATED             STATUS              PORTS                  NAMES
+874a13f65926        myapp                      "httpd-foreground"   2 minutes ago       Up 2 minutes        0.0.0.0:8080->80/tcp   myapp
+034a8606b4b0        myproject-dev-env:latest   "bash"               28 minutes ago      Up 28 minutes                              testdriveninfrastructurecukeup_dev-env_run_1
+```
+
+```
+# docker network ls
+NETWORK ID          NAME                                      DRIVER              SCOPE
+...
+76a9193ca4b4        testdriveninfrastructurecukeup_default    bridge              local
+```
+
+```
+# docker network connect 76a9193ca4b4 874a13f65926
+```

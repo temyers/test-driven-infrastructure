@@ -1,2 +1,6 @@
 --color
 --format documentation
+--format RspecJunitFormatter
+--out rspec<%= ENV["TEST_ENV_NUMBER"] %>.xml
+#--format html
+#--out results.html
